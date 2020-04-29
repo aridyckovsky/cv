@@ -1,0 +1,255 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Ari Dyckovsky's CV Template - CV CLASS FILE
+%
+% This class file defines the structure and design of a hybrid CV/Resume template. 
+%
+% Original header:
+% Copyright (C) 2020 by Ari Dyckovsky
+%
+% Copying and distribution of this file, with or without modification,
+% are permitted in any medium without royalty provided the copyright
+% notice and this notice are preserved. This file is offered as-is,
+% without any warranty.
+%
+% Created by Ari Dyckovsky
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass{cv} % Load cv.cls style
+
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=blue,      
+    urlcolor=blue,
+}
+
+\usepackage[
+backend=biber,
+style=apa,
+sorting=ydnt
+]{biblatex}
+
+\addbibresource{publications.bib}
+
+\usepackage[left=0.75in,top=0.6in,right=0.75in,bottom=0.6in]{geometry} % Document margins
+\newcommand{\tab}[1]{\hspace{.2667\textwidth}\rlap{#1}}
+\newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
+
+\renewcommand*{\mkbibnamegiven}[1]{%
+\ifitemannotation{highlight}
+{\textbf{#1}}
+{#1}}
+
+\renewcommand*{\mkbibnamefamily}[1]{%
+\ifitemannotation{highlight}
+{\textbf{#1}}
+{#1}}
+
+\name{Ari Dyckovsky} % Your name
+\address{2827 Garfield Street, Denver, CO 80205} % Your address
+\address{(+1)~571~426~9971 \\ aridyckovsky@gmail.com} % Your phone number and email
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{cvSection}{Education}
+
+{\bf University of Denver} \hfill {01/2020 - Present} 
+\\
+B.A. in Psychology with Minor in Mathematics
+\\
+Academic Advisor: Pamela Miller, PhD
+\\
+GPA: {\bf 4.00}/4
+
+{\bf Stanford University} \hfill {09/2012 - 03/2014; 09/2017 - 06/2018} 
+\\
+Undergraduate Studies in Symbolic Systems
+\\
+Academic Advisor: James Gross, PhD
+\\
+GPA: {\bf 3.41}/4
+
+%Member of Eta Kappa Nu \\
+%Member of Upsilon Pi Epsilon \\
+
+
+\end{cvSection}
+%----------------------------------------------------------------------------------------
+%	TECHNICAL STRENGTHS SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{cvSection}{Technical Strengths}
+
+\begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
+Languages &  R, Python, MATLAB, Mathematica, NetLogo, C/C\texttt{++}, JavaScript, HTML, CSS,
+\\
+                      &  Bash, Git, Vim, Markdown, SQL, Q, \LaTeX
+\\
+Databases & PostgreSQL, SQLite, MongoDB, kdb+
+\\
+Tools & GitHub, Qualtrics, SPSS, Word, Excel, Powerpoint, Sketch, Photoshop, Lightroom \\
+
+
+\end{tabular}
+
+\end{cvSection}
+
+%----------------------------------------------------------------------------------------
+%	RESEARCH EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{cvSection}{Research Experience}
+
+\begin{cvSubsectionResearch}{University of Denver}{Department of Psychology}{03/2020 - Present}{Peter Sokol-Hessner, PhD}
+\item Prepared and analyzed subject response data in R from online image categorization task
+\item Processed and analyzed eye-tracking data in MATLAB from continuous self-control task
+\item Developed computational model of self-control over multiple time scales
+\item Upgraded lab's technology to utilize version control via Git and GitHub
+\end{cvSubsectionResearch}
+
+
+%------------------------------------------------
+
+\begin{cvSubsectionResearch}
+{Harvard Business School}{Negotiation, Organizations \& Markets Unit}{04/2020 - Present}{Amit Goldenberg, PhD}
+\item Prepared and analyzed subject response data in Python from online network selection task
+\item Developed and trained hierarchical hidden Markov models to predict network selection strategies
+\end{cvSubsectionResearch}
+
+%------------------------------------------------
+
+\begin{cvSubsectionResearch}{Stanford University}{Department of Psychology}{10/2017 - 08/2018}{Amit Goldenberg, PhD}
+\item Examined theoretical concepts of collective emotional dynamics in complex, multi-agent social systems
+\item Developed agent-based modeling and simulation package \texttt{coaffect} in Python
+\end{cvSubsectionResearch}
+
+%------------------------------------------------
+
+\begin{cvSubsectionResearch}{National Institute of Standards and Technology}{Atomic Physics Division}{01/2010 - 06/2012}{Steven Olmschenk, PhD}
+\item Conducted basic research to advance quantum computing and quantum communication
+\item Theorized analytical and numerical measures of quantum entanglement
+\item Programmed computational methods in \textit{Mathematica}
+\item Contributed to laser cooling experiments and engineered novel optical mounts
+\end{cvSubsectionResearch}
+
+\end{cvSection}
+
+\begin{cvSectionEmpty}{Publications}
+   \nocite{*}
+   \printbibliography[heading=none]
+\end{cvSectionEmpty}
+
+
+%----------------------------------------------------------------------------------------
+%	INDUSTRY EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{cvSection}{Industry Experience}
+
+\begin{cvSubsectionWork}{HomeyGroup, Inc.}{04/2019 - 09/2019}{Advisor}{San Francisco, CA}
+\item Aggregated and analyzed real estate and property management market data
+\item Coordinated relationships between founders and investors
+\end{cvSubsectionWork}
+
+%------------------------------------------------
+
+\begin{cvSubsectionWork}{Keep It Crafted, LLC}{07/2018 - 09/2019}{Founder}{New York, NY}
+\item Developed recipes and menus for high-end cocktail bars in various metropolitan cities
+\item Hosted weekly industry research meetings focused on recipe development and marketing strategies
+\item Produced advertising and marketing materials for social media outlets
+\end{cvSubsectionWork}
+
+%------------------------------------------------
+
+\begin{cvSubsectionWork}{Kofa Technologies, Inc.}{01/2017 - 06/2017}{Consultant}{San Francisco, CA}
+\item Revised and implemented new sales and marketing workflows for a growing company
+\item Advised the CEO and CTO on growth strategies
+\end{cvSubsectionWork}
+
+%------------------------------------------------
+
+\begin{cvSubsectionWork}{Kettle Group, Inc.}{11/2015 - 01/2017}{Founder}{San Francisco, CA}
+\item Fundraised \$185K Pre-Seed from angel investors around Silicon Valley
+\item Recruited and hired team of software engineers and designers
+\item Studied organizational social trends and implemented network analyses to evaluate corporate cultures
+\item Dissolved the corporation due lack of product demand
+\end{cvSubsectionWork}
+
+%------------------------------------------------
+
+\begin{cvSubsectionWork}{Argo Technologies, Inc.}{06/2013 - 01/2015}{Co-Founder}{Palo Alto, CA}
+\item Fundraised \$1.525M Seed from Accel Partners
+\item Recruited and hired team of software engineers, designers, and business development staff
+\item Launched natural language search product for financial institutions' data exploration and visualizations
+\item Acquired by Tableau Software for \$33M and integrated into product suite as "Ask Data" 
+\end{cvSubsectionWork}
+
+%------------------------------------------------
+
+\begin{cvSubsectionWork}{IEX Group, Inc.}{04/2013 - 09/2013}{Intern}{Palo Alto, CA}
+\item Developed quantitative analysis framework in Q for financial time series in kdb+
+\item Contributed UI enhancements to internal software tools 
+\item Co-authored patent application for proprietary data analysis methods
+\end{cvSubsectionWork}
+
+\end{cvSection}
+
+%----------------------------------------------------------------------------------------
+%	HONORS AND AWARDS
+%----------------------------------------------------------------------------------------
+
+\begin{cvSection}{Honors and Awards} \itemsep -2pt
+\item Mt. Evans Scholarship, University of Denver, 2020
+\item Intel Young Scientist Award, Intel International Science and Engineering Fair, 2012
+\item Finalist, Intel Science Talent Search, 2012
+\item 2nd Place, National Junior Science and Humanities Symposium, 2012
+\item 1st Place, International Space Olympics, 2011
+\end{cvSection}
+
+%----------------------------------------------------------------------------------------
+%	NEWS & MEDIA
+%----------------------------------------------------------------------------------------
+
+\begin{cvSection}{Selected Media Mentions} \itemsep -2pt
+
+\href{https://www.washingtonpost.com/local/education/loudoun-science-prodigy-leaves-college-to-launch-tech-company/2014/04/01/e915c98c-b9c0-11e3-96ae-f2c36d2b1245_story.html}{Loudoun science prodigy leaves college to launch tech company} \\
+\textit{The Washington Post}, 04/2014
+
+\href{https://kwhs.wharton.upenn.edu/2013/10/innovation/}{What Is Innovation?}\\ \textit{Knowledge Wharton Highschool}, 10/2013
+
+\href{https://www.wired.com/2012/08/quantum-router/}{Physicists Foretell Quantum Internet With Entangled Photon Router}\\
+\textit{Wired}, 08/2012
+
+\href{https://www.washingtonpost.com/local/intel-contest-finalist-loudoun-teen-with-passion-for-science/2012/03/05/gIQAkaT3wR_story.html}{Loudoun teen competes for Intel science prize} \\
+\textit{The Washington Post}, 05/2012
+
+\end{cvSection}
+
+%----------------------------------------------------------------------------------------
+%	COURSEWORK
+%----------------------------------------------------------------------------------------
+
+\begin{cvSection}{Relevant Courses}
+\itab{Neural Network Models of Cognition} \tab{}  \tab{Linear Algebra \& Matrix Theory} \\
+\itab{Affective Neuroscience} \tab{}  \tab{Mathematical Foundations of Computing} \\
+\itab{Decision Making \& Neuroeconomics} \tab{}  \tab{Probability Theory} \\
+\itab{Research Experiences Keystone} \tab{} \tab{Multivariate Calculus} \\
+\itab{Social Psychology} \tab{} \tab{Programming Abstractions} \\
+\itab{Special Topics in Emotion Regulation} \tab{} \tab{Statistical Inference}
+
+\end{cvSection}
+
+\end{document}
+

@@ -12,6 +12,7 @@
 % without any warranty.
 %
 % Created by Ari Dyckovsky
+% Inspired by Trey Hunner's Medium Length Resume Template
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -119,7 +120,7 @@
 %	RESEARCH EXPERIENCE SUBSECTIONS
 %------------------------------------------------------------------------------
 
-\newenvironment{rSubsectionResearch}[4]{ % 4 input arguments - institution name, department (if any), dates involved, and advisor name
+\newenvironment{cvSubsectionResearch}[4]{ % 4 input arguments - institution name, department (if any), dates involved, and advisor name
  {\bf #1}{ #2} \hfill {#3} % Bold company name and date on the right
  \ifthenelse{\equal{#4}{}}{}{ % If the third argument is not specified, don't print 
   \\
@@ -136,7 +137,7 @@
 %	WORK EXPERIENCE SUBSECTIONS
 %------------------------------------------------------------------------------
 
-\newenvironment{rSubsectionWork}[4]{ % 4 input arguments - company name, year(s) employed, job title and location
+\newenvironment{cvSubsectionWork}[4]{ % 4 input arguments - company name, year(s) employed, job title and location
  {\bf #1} \hfill {#2} % Bold company name and date on the right
  \ifthenelse{\equal{#3}{}}{}{ % If the third argument is not specified, don't print the job title and location line
   \\

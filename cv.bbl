@@ -1,0 +1,160 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{ydnt/global//global/global}
+    \entry{coaffect1}{misc}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=b86866f6b1ee5ff441de618db4dc308d}{%
+           family={Dyckovsky},
+           familyi={D\bibinitperiod},
+           given={Ari\bibnamedelima M.},
+           giveni={A\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1900ef1d44e21de1a0ac6aaea90e538f}{%
+           family={Goldenberg},
+           familyi={G\bibinitperiod},
+           given={Amit},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Stanford Psychophysiology Laboratory}%
+      }
+      \strng{namehash}{4c22e512445fbb6a3f89178388f69c0b}
+      \strng{fullhash}{4c22e512445fbb6a3f89178388f69c0b}
+      \strng{bibnamehash}{4c22e512445fbb6a3f89178388f69c0b}
+      \strng{authorbibnamehash}{4c22e512445fbb6a3f89178388f69c0b}
+      \strng{authornamehash}{4c22e512445fbb6a3f89178388f69c0b}
+      \strng{authorfullhash}{4c22e512445fbb6a3f89178388f69c0b}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Invited talk}
+      \field{title}{Responding Together: A model of collective emotion.}
+      \field{year}{2018}
+      \true{nocite}
+      \annotation{item}{author}{default}{1}{}{0}{highlight}
+    \endentry
+    \entry{physics2}{article}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=f5171044adc5f353a55c1327199890a7}{%
+           family={Brown},
+           familyi={B\bibinitperiod},
+           given={R.\bibnamedelimi C.},
+           giveni={R\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9475602418fe1a3251592bbaa215788d}{%
+           family={Olmschenk},
+           familyi={O\bibinitperiod},
+           given={Steven},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d88ef0c0ed31e6984ffe52032bd04a62}{%
+           family={Wu},
+           familyi={W\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5441f6fc8406f80d4f92a063163ae0ee}{%
+           family={Dyckovsky},
+           familyi={D\bibinitperiod},
+           given={A.\bibnamedelimi M.},
+           giveni={A\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=bb345e27ee4b27f5833d2ad8d96f3184}{%
+           family={Wyllie},
+           familyi={W\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a227ff04ec6292373ac9f5de557f5e3a}{%
+           family={Porto},
+           familyi={P\bibinitperiod},
+           given={J.\bibnamedelimi V.},
+           giveni={J\bibinitperiod\bibinitdelim V\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{1efd3d3fb851711705a15c635054f7e9}
+      \strng{fullhash}{de271d9df7189ab7c274dbea0f01e041}
+      \strng{bibnamehash}{de271d9df7189ab7c274dbea0f01e041}
+      \strng{authorbibnamehash}{de271d9df7189ab7c274dbea0f01e041}
+      \strng{authornamehash}{1efd3d3fb851711705a15c635054f7e9}
+      \strng{authorfullhash}{de271d9df7189ab7c274dbea0f01e041}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Review of Scientific Instruments}
+      \field{number}{9}
+      \field{title}{Note: Pneumatically actuated and kinematically positioned optical mounts compatible with laser-cooling experiments}
+      \field{volume}{84}
+      \field{year}{2013}
+      \true{nocite}
+      \field{pages}{096101}
+      \range{pages}{1}
+      \annotation{item}{author}{default}{4}{}{0}{highlight}
+    \endentry
+    \entry{physics1}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=b86866f6b1ee5ff441de618db4dc308d}{%
+           family={Dyckovsky},
+           familyi={D\bibinitperiod},
+           given={Ari\bibnamedelima M.},
+           giveni={A\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9475602418fe1a3251592bbaa215788d}{%
+           family={Olmschenk},
+           familyi={O\bibinitperiod},
+           given={Steven},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{577c51233eb9305adb914677acdeecad}
+      \strng{fullhash}{577c51233eb9305adb914677acdeecad}
+      \strng{bibnamehash}{577c51233eb9305adb914677acdeecad}
+      \strng{authorbibnamehash}{577c51233eb9305adb914677acdeecad}
+      \strng{authornamehash}{577c51233eb9305adb914677acdeecad}
+      \strng{authorfullhash}{577c51233eb9305adb914677acdeecad}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Physical Review A}
+      \field{number}{5}
+      \field{title}{Analysis of photon-mediated entanglement between distinguishable matter qubits}
+      \field{volume}{85}
+      \field{year}{2012}
+      \true{nocite}
+      \field{pages}{052322}
+      \range{pages}{1}
+      \annotation{item}{author}{default}{1}{}{0}{highlight}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

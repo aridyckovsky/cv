@@ -1,5 +1,0 @@
-[0] Config.pm:304> INFO - This is Biber 2.14
-[0] Config.pm:307> INFO - Logfile is 'cv.tex.blg'
-[123] biber-darwin:322> INFO - === Wed Apr 29, 2020, 00:40:10
-[301] Utils.pm:320> ERROR - Cannot find 'cv.tex.bcf'!
-[302] Biber.pm:132> INFO - ERRORS: 1

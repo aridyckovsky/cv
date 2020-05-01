@@ -21,8 +21,8 @@
 
 \documentclass{cv} % Load cv.cls style
 
-\usepackage[utf8]{inputenc}
 \usepackage[english]{babel}
+\usepackage{csquotes}
 \usepackage{hyperref}
 \hypersetup{
     colorlinks=true,
@@ -37,7 +37,7 @@ style=apa,
 sorting=ydnt
 ]{biblatex}
 
-\addbibresource{publications.bib}
+\addbibresource{sources.bib}
 
 \usepackage[left=0.75in,top=0.6in,right=0.75in,bottom=0.6in]{geometry} % Document margins
 \newcommand{\tab}[1]{\hspace{.2667\textwidth}\rlap{#1}}
@@ -58,6 +58,9 @@ sorting=ydnt
 \address{(+1)~571~426~9971 \\ aridyckovsky@gmail.com} % Your phone number and email
 
 \begin{document}
+
+% Start by claiming no citations for bibtex items later
+\nocite{*}
 
 %----------------------------------------------------------------------------------------
 %	EDUCATION SECTION
@@ -81,11 +84,8 @@ Academic Advisor: James Gross, PhD
 \\
 GPA: {\bf 3.41}/4
 
-%Member of Eta Kappa Nu \\
-%Member of Upsilon Pi Epsilon \\
-
-
 \end{cvSection}
+
 %----------------------------------------------------------------------------------------
 %	TECHNICAL STRENGTHS SECTION
 %----------------------------------------------------------------------------------------
@@ -147,10 +147,18 @@ Tools & GitHub, Qualtrics, SPSS, Word, Excel, Powerpoint, Sketch, Photoshop, Lig
 \end{cvSection}
 
 \begin{cvSectionEmpty}{Publications}
-   \nocite{*}
-   \printbibliography[heading=none]
+   \printbibliography[
+     heading=none,
+     keyword=publications
+   ]
 \end{cvSectionEmpty}
 
+\begin{cvSectionEmpty}{Presentations}
+   \printbibliography[
+     heading=none,
+     keyword=talks
+   ]
+\end{cvSectionEmpty}
 
 %----------------------------------------------------------------------------------------
 %	INDUSTRY EXPERIENCE SECTION
@@ -207,35 +215,28 @@ Tools & GitHub, Qualtrics, SPSS, Word, Excel, Powerpoint, Sketch, Photoshop, Lig
 \end{cvSection}
 
 %----------------------------------------------------------------------------------------
-%	HONORS AND AWARDS
+%	HONORS
 %----------------------------------------------------------------------------------------
 
-\begin{cvSection}{Honors and Awards} \itemsep -2pt
+\begin{cvSection}{Honors and Awards}
 \item Mt. Evans Scholarship, University of Denver, 2020
 \item Intel Young Scientist Award, Intel International Science and Engineering Fair, 2012
+\item Best of Category, Intel International Science and Engineering Fair, 2012
 \item Finalist, Intel Science Talent Search, 2012
 \item 2nd Place, National Junior Science and Humanities Symposium, 2012
-\item 1st Place, International Space Olympics, 2011
+\item Regional Semifinalist, The Siemens Competition, 2011
+\item Yale Science and Engineering Award, Loudoun County Regional Science and
+  Engineering Fair, 2011
+\item 1st Place, International Space Olympics, 2010
 \end{cvSection}
 
 %----------------------------------------------------------------------------------------
 %	NEWS & MEDIA
 %----------------------------------------------------------------------------------------
 
-\begin{cvSection}{Selected Media Mentions} \itemsep -2pt
-
-\href{https://www.washingtonpost.com/local/education/loudoun-science-prodigy-leaves-college-to-launch-tech-company/2014/04/01/e915c98c-b9c0-11e3-96ae-f2c36d2b1245_story.html}{Loudoun science prodigy leaves college to launch tech company} \\
-\textit{The Washington Post}, 04/2014
-
-\href{https://kwhs.wharton.upenn.edu/2013/10/innovation/}{What Is Innovation?}\\ \textit{Knowledge Wharton Highschool}, 10/2013
-
-\href{https://www.wired.com/2012/08/quantum-router/}{Physicists Foretell Quantum Internet With Entangled Photon Router}\\
-\textit{Wired}, 08/2012
-
-\href{https://www.washingtonpost.com/local/intel-contest-finalist-loudoun-teen-with-passion-for-science/2012/03/05/gIQAkaT3wR_story.html}{Loudoun teen competes for Intel science prize} \\
-\textit{The Washington Post}, 05/2012
-
-\end{cvSection}
+\begin{cvSectionEmpty}{News \& Media}
+    \printbibliography[heading=none, keyword=media]
+\end{cvSectionEmpty}
 
 %----------------------------------------------------------------------------------------
 %	COURSEWORK

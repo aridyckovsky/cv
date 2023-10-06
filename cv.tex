@@ -1,0 +1,455 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Ari Dyckovsky's CV Template -- CV CLASS FILE
+%
+% This class file defines the structure and design of a hybrid CV/Resume template. 
+%
+% Original header:
+% Copyright (C) 2020 by Ari Dyckovsky
+%
+% Copying and distribution of this file, with or without modification,
+% are permitted in any medium without royalty provided the copyright
+% notice and this notice are preserved. This file is offered as-is,
+% without any warranty.
+%
+% Created by Ari Dyckovsky
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass{cv} % Load cv.cls style
+
+\usepackage[english]{babel}
+\usepackage{csquotes}
+\usepackage{hyperref}
+\usepackage{comment}
+\usepackage{dirtytalk}
+\usepackage{libertinus}
+\usepackage[T1]{fontenc}
+
+\usepackage[
+backend=biber,
+style=apa,
+sorting=dymndt
+]{biblatex}
+
+\DeclareSortingTemplate{dymndt}{
+  \sort{
+    \field{presort}
+  }
+  \sort[final]{
+    \field{sortkey}
+  }
+  \sort[direction=descending]{
+    \field{sortyear}
+    \field{year}
+    \literal{9999}
+  }
+  \sort[direction=descending]{
+    \field[padside=left,padwidth=2,padchar=0]{month}
+    \literal{99}
+  }
+  \sort[direction=descending]{
+    \field[padside=left,padwidth=2,padchar=0]{day}
+    \literal{99}
+  }
+  \sort{
+    \field{sortname}
+    \field{author}
+    \field{editor}
+    \field{translator}
+    \field{sorttitle}
+    \field{title}
+  }
+  \sort{
+    \field{sorttitle}
+  }
+  \sort[direction=descending]{
+    \field[padside=left,padwidth=4,padchar=0]{volume}
+    \literal{9999}
+  }
+}
+
+\addbibresource{sources.bib}
+
+\usepackage[top=.5in,bottom=.5in,left=.75in,right=.75in]{geometry} % Document margins
+\newcommand{\tab}[1]{\hspace{.2667\textwidth}\rlap{#1}}
+\newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
+
+\renewcommand*{\mkbibnamegiven}[1]{%
+\ifitemannotation{highlight}
+{\textbf{#1}}
+{#1}}
+
+\renewcommand*{\mkbibnamefamily}[1]{%
+\ifitemannotation{highlight}
+{\textbf{#1}}
+{#1}}
+
+\newlength{\mybibitemsep}\setlength{\bibitemsep}{.35\baselineskip plus .05\baselineskip minus .05\baselineskip}
+\newlength{\bibparskip}\setlength{\bibparskip}{0pt}
+\let\oldthebibliography\thebibliography
+\renewcommand\thebibliography[1]{%
+  \oldthebibliography{#1}%
+  \setlength{\parskip}{\mybibitemsep}%
+  \setlength{\itemsep}{\bibparskip}%
+}
+
+\AtEveryCitekey{\clearfield{extradate}}
+\AtEveryBibitem{\clearfield{extradate}}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=mylinks,
+    filecolor=mylinks,      
+    urlcolor=mylinks,
+    pdftitle={Ari Misha Dyckovsky's CV (last updated: \today)}
+}
+
+\makeatletter
+\newcommand{\globalcolor}[1]{%
+  \color{#1}\global\let\default@color\current@color
+}
+\makeatother
+
+% Header Items
+\myname{Ari Misha Dyckovsky}
+\myaddress{528 Peretsman Scully Hall}
+\mylocation{Princeton, NJ 08540 USA}
+\myphone{}
+\myemail{adyckovsky@princeton.edu}
+\mywebsite{www.aridyckovsky.com}
+%\mygithub{(571) 426-9971}
+
+\AtBeginDocument{\globalcolor{myblack}}
+\begin{document}
+
+% Start by claiming no citations for bibtex items later
+\nocite{*}
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{cvSection}{Education}
+
+\begin{minipage}[t]{0.80\linewidth}
+    \raggedright \textbf{Ph.D. Candidate}, Psychology%
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.15\linewidth}
+    \raggedleft 2021 -- Present%
+\end{minipage}
+\\
+\begin{minipage}[t]{0.50\linewidth}
+    \raggedright \textbf{M.A.}, Psychology%
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.45\linewidth}
+    \raggedleft 2021 -- 2023
+\end{minipage}
+\\
+\begin{minipage}[t]{0.80\linewidth}
+    \raggedright \textit{Princeton University (Advisors: Alin Coman \& Eldar Shafir)}%
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.15\linewidth}
+%
+\end{minipage}
+
+
+\begin{minipage}[t]{0.50\linewidth}
+    \raggedright \textbf{B.A.}, Psychology%
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.45\linewidth}
+    \raggedleft 2020%
+\end{minipage}
+\\
+\begin{minipage}[t]{0.50\linewidth}
+    \raggedright \textit{University of Denver}%
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.45\linewidth}
+    %\raggedleft GPA: {\bf 3.97}%
+\end{minipage}
+
+\begin{minipage}[t]{0.50\linewidth}
+    \raggedright Undergraduate Studies, Symbolic Systems%
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.45\linewidth}
+    \raggedleft 2012 -- 2014; 2017 -- 2018%
+\end{minipage}
+\\
+\begin{minipage}[t]{0.50\linewidth}
+    \raggedright \textit{Stanford University}%
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.45\linewidth}
+    %\raggedleft GPA: {\bf 3.41}%
+\end{minipage}
+
+\end{cvSection}
+
+%----------------------------------------------------------------------------------------
+%	FELLOWSHIPS & GRANTS
+%----------------------------------------------------------------------------------------
+
+\begin{cvSection}{Fellowships}
+
+\begin{minipage}[t]{0.50\linewidth}
+    \raggedright \textbf{Graduate Research Fellow (\$147,000)}%
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.45\linewidth}
+    \raggedleft 2023 -- 2028%
+\end{minipage}
+\\
+\begin{minipage}[t]{0.70\linewidth}
+    \raggedright \textit{National Science Foundation}%
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.25\linewidth}
+    %
+\end{minipage}
+
+\begin{minipage}[t]{0.70\linewidth}
+    \raggedright \textbf{Centennial Fellow (\$20,000)}%
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.25\linewidth}
+    \raggedleft 2021 -- 2026%
+\end{minipage}
+\\
+\begin{minipage}[t]{0.70\linewidth}
+    \raggedright \textit{Princeton University via The Graduate School}%
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.25\linewidth}
+    %
+\end{minipage}
+
+\begin{minipage}[t]{0.70\linewidth}
+    \raggedright \textbf{Graduate Fellow in Social Data Science (\$1,400)}%
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.25\linewidth}
+    \raggedleft 2023%
+\end{minipage}
+\\
+\begin{minipage}[t]{0.70\linewidth}
+    \raggedright \textit{Princeton University via Data-Driven Social Science Initiative}%
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.25\linewidth}
+    %
+\end{minipage}
+
+\end{cvSection}
+
+\begin{cvSection}{Grants}
+\begin{minipage}[t]{0.80\linewidth}
+    \raggedright \textbf{Large-Scale Grant (\$35,208)}: ``Exploring the social construction of value in blockchain systems''%
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.15\linewidth}
+    \raggedleft 2023 -- 2025%
+\end{minipage}
+\\
+\begin{minipage}[t]{0.80\linewidth}
+    \raggedright \textit{Princeton University via Data-Driven Social Science Initiative}%
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.15\linewidth}
+    %
+\end{minipage}
+
+\end{cvSection}
+
+%----------------------------------------------------------------------------------------
+%	HONORS
+%----------------------------------------------------------------------------------------
+
+\begin{cvSection}{Scholarships, Honors \& Awards}
+
+\begin{cvSubsectionAwards}{Mission Award}{Application Statement Feedback Program}{2023}{Society for the Improvement of Psychological Science}
+\end{cvSubsectionAwards}
+
+\begin{cvSubsectionAwards}{Honorable Mention}{National Defense Science and Engineering Graduate Fellowship}{2023}{U.S. Department of Defense}
+\end{cvSubsectionAwards}
+
+\begin{cvSubsectionAwards}{Mt. Evans Scholarship (\$16,000)}{Merit Scholarships}{2020}{University of Denver}
+\end{cvSubsectionAwards}
+
+\begin{cvSubsectionAwards}{Intel Young Scientist Award (\$50,000)}{Intel International Science and Engineering Fair}{2012}{Society for Science and the Public}
+\end{cvSubsectionAwards}
+
+\begin{cvSubsectionAwards}{National Finalist (\$7,500)}{Intel Science Talent Search}{2012}{Society for Science and the Public}
+\end{cvSubsectionAwards}
+
+\begin{cvSubsectionAwards}{Scientific Achievement Award (\$7,000)}{Howard Hughes Medical Institute Scholarship Competition}{2012}{Howard Hughes Medical Institute}
+\end{cvSubsectionAwards}
+
+\begin{cvSubsectionAwards}{2nd Place, Physical Sciences (\$8,000)}{National Junior Science and Humanities Symposium}{2011}{U.S. Department of Defense \& National Science Teachers Association}
+\end{cvSubsectionAwards}
+
+\begin{cvSubsectionAwards}{Regional Semifinalist}{The Siemens Competition}{2011}{Siemens Foundation}
+\end{cvSubsectionAwards}
+
+\begin{cvSubsectionAwards}{Yuri Gagarin Medal for Outstanding Space Research}{The International Space Olympics}{2010}{S.P. Korolyov Energia Space and Rocket Corporation}
+\end{cvSubsectionAwards}
+
+\end{cvSection}
+
+%----------------------------------------------------------------------------------------
+%	PUBLICATIONS SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{cvSectionEmpty}{Current Projects}
+    \printbibliography[
+        heading=none,
+        keyword=in-prep
+    ]
+\end{cvSectionEmpty}
+
+\begin{cvSectionEmpty}{Publications}
+    \printbibliography[
+        heading=none,
+        keyword=publications
+    ]
+\end{cvSectionEmpty}
+
+%----------------------------------------------------------------------------------------
+%	RESEARCH EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{cvSection}{Research Experience}
+
+\begin{cvSubsectionResearch}{Princeton University}{Department of Psychology}{2021 -- Present}{Graduate Research Assistant}{Alin Coman}
+\end{cvSubsectionResearch}
+
+\begin{cvSubsectionResearch}{University of Denver}{Department of Psychology}{2020 -- 2021}{Lab Manager \& Research Assistant}{Peter Sokol-Hessner}
+\end{cvSubsectionResearch}
+
+\begin{cvSubsectionResearch}
+{Harvard Business School}{Negotiation, Organizations \& Markets Unit}{2020 -- 2021}{Research Assistant}{Amit Goldenberg}
+\end{cvSubsectionResearch}
+
+\begin{cvSubsectionResearch}{Stanford University}{Department of Psychology}{2017 -- 2018}{Research Assistant}{Amit Goldenberg}
+\end{cvSubsectionResearch}
+
+\begin{cvSubsectionResearch}{National Institute of Standards and Technology}{Atomic Physics Division}{2010 -- 2012}{Student Researcher}{Steven Olmschenk}
+\end{cvSubsectionResearch}
+
+\end{cvSection}
+
+%----------------------------------------------------------------------------------------
+%	INDUSTRY EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{cvSection}{Industry Experience}
+
+\begin{cvSubsectionWork}{Keep It Crafted, LLC}{2018 -- 2020}{Founder}
+\end{cvSubsectionWork}
+
+\begin{cvSubsectionWork}{Kettle Group, Inc.}{2015 -- 2017}{Founder \& Chief Executive Officer}
+\end{cvSubsectionWork}
+
+\begin{cvSubsectionWork}{Argo Technologies, Inc. (Acquired by Tableau)}{2013 -- 2015}{Co-Founder}
+\end{cvSubsectionWork}
+
+\begin{cvSubsectionWork}{IEX Group, Inc.}{2013}{Intern}
+\end{cvSubsectionWork}
+
+\end{cvSection}
+
+%----------------------------------------------------------------------------------------
+%	SERVICE SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{cvSection}{Service}
+
+\begin{cvSubsectionWork}{Empowering Tomorrow's Human-AI Interaction \& Ethics Community (``ETHICOM'')}{2023 -- Present}{Treasurer}
+\end{cvSubsectionWork}
+
+\begin{cvSubsectionWork}{Application Statement Feedback Program [\href{https://www.asfp.io/}{ \normalfont{\color{mylinks}www.asfp.io}}]}{2020 -- Present}{Director of Core Systems}
+\end{cvSubsectionWork}
+
+\begin{cvSubsectionWork}{Princeton University Department of Psychology}{2022 -- 2023}{Graduate Student Committee}
+\end{cvSubsectionWork}
+
+\begin{cvSubsectionWork}{Start Your Lab [\href{https://www.startyourlab.com/}{ \normalfont{\color{mylinks}www.startyourlab.com}}]}{2021}{Creator \& Core Maintainer}
+\end{cvSubsectionWork}
+
+\end{cvSection}
+
+%----------------------------------------------------------------------------------------
+%	REVIEWS SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{cvSectionEmpty}{Ad-Hoc Reviews}
+\textit{Nature, Perspectives on Psychological Science}
+\end{cvSectionEmpty}
+
+%----------------------------------------------------------------------------------------
+%	TEACHING EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{cvSection}{Teaching}
+\begin{cvSubsectionTeaching}{Assistant Instructor}{PSY 320: Psychotherapy Theories and Skills}{4.41}{Spring 2023}{Princeton University}
+\end{cvSubsectionTeaching}
+
+\begin{cvSubsectionTeaching}{Assistant Instructor}{SPI 340: Psychology of Decision-Making and Judgment}{4.67}{Fall 2022}{Princeton University}
+\end{cvSubsectionTeaching}
+\end{cvSection}
+
+%%%
+
+%----------------------------------------------------------------------------------------
+%	PRESENTATIONS SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{cvSectionEmpty}{Selected Presentations}
+   \printbibliography[
+     heading=none,
+     keyword=selected-talks
+   ]
+\end{cvSectionEmpty}
+
+%----------------------------------------------------------------------------------------
+%	NEWS & MEDIA
+%----------------------------------------------------------------------------------------
+
+\begin{cvSectionEmpty}{News \& Media}
+    \printbibliography[heading=none, keyword=media]
+\end{cvSectionEmpty}
+
+%----------------------------------------------------------------------------------------
+%	TECHNICAL STRENGTHS SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{cvSection}{Selected Skills}
+
+\begin{tabular}{ @{} >{\bfseries}l @{\hspace{1em}} l }
+Techniques &  Online Experiments, Agent-Based Modeling, Natural Language Processing, Data Visualization,
+\\
+& Statistical Inference, User Interface Design, Application Programming Interfaces
+\\\\
+Languages &  R, Python, JavaScript, MATLAB, \textit{Mathematica}, HTML, CSS, C/C\texttt{++}, Google Apps Script, NetLogo, \LaTeX{},
+\\
+& SQL, Q, Git, Vim, Markdown, Bash
+\\\\
+Databases & PostgreSQL, SQLite, MongoDB, DynamoDB, Neo4j, Redis, kdb+
+\\\\
+Tools & GitHub, Amazon Web Services (e.g., S3, Lambda, EC2), Docker, Slack, RStudio, Qualtrics, SPSS, Figma,
+\\
+& Photoshop, Lightroom, Microsoft Office
+\end{tabular}
+
+\end{cvSection}
+
+\end{document}
+

@@ -41,4 +41,3 @@ jobs:
           tag: ${{ steps.generate_release_tag.outputs.next_release_tag }}
           artifacts: "cv/cv.pdf"
           generateReleaseNotes: true
-          makeLatest: true

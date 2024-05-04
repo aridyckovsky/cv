@@ -29,7 +29,7 @@ jobs:
           name: cv
           path: output/cv.pdf
       - name: Commit
-        uses: stefanweifel/git-auto-commit-action@v5
+        uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_user_name: Ari Dyckovsky
           commit_user_email: aridyckovsky@gmail.com

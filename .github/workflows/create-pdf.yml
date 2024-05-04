@@ -20,16 +20,13 @@ jobs:
       - name: Build
         uses: xu-cheng/latex-action@v3
         with:
-          root_file: cv/cv.tex
-      - name: Copy
-        run: |
-          mkdir output
-          cp ./cv.pdf ./output/cv.pdf
+          root_file: cv.tex
+          working_directory: cv
       - name: Upload
         uses: actions/upload-artifact@v4
         with:
           name: cv
-          path: output/cv.pdf
+          path: cv.pdf
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
@@ -48,5 +45,5 @@ jobs:
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
           asset_name: cv
-          asset_path: output/cv.pdf
+          asset_path: cv.pdf
           asset_content_type: application/pdf

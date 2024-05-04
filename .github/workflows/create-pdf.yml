@@ -10,6 +10,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -21,7 +23,15 @@ jobs:
         run: |
           mkdir output
           cp ./cv.pdf ./output/cv.pdf
-      - uses: actions/upload-artifact@v4
+      - name: Upload
+        uses: actions/upload-artifact@v4
         with:
           name: cv
           path: output/cv.pdf
+      - name: Commit
+        uses: stefanweifel/git-auto-commit-action@v5
+        with:
+          commit_user_name: Ari Dyckovsky
+          commit_user_email: aridyckovsky@gmail.com
+          commit_author: Ari Dyckovsky <aridyckovsky@gmail.com>
+          commit_message: Automated PDF creation at ${{ github.event.repository.updated_at}}

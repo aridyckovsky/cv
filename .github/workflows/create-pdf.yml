@@ -32,4 +32,4 @@ jobs:
         uses: ncipollo/release-action@v1
         with:
           tag: "test-release"
-          artifacts: "cv.pdf"
+          artifacts: "cv/cv.pdf"

@@ -41,7 +41,8 @@
     "latex-workshop.latex.clean.subfolder.enabled": true,
     "latex-workshop.synctex.afterBuild.enabled": true,
     "latex-workshop.view.pdf.viewer": "tab",
-    "latex-workshop.latex.outDir": "%DIR%/output",
+    "latex-workshop.latex.bibDirs": ["%WORKSPACE_FOLDER%/cv/bib"],
+    "latex-workshop.latex.outDir": "%WORKSPACE_FOLDER%/output",
     "latex-workshop.latex.magic.args": [
         "-synctex=1",
         "-shell-escape",

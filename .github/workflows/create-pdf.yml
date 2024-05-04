@@ -15,10 +15,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }}
       - name: Build
         uses: xu-cheng/latex-action@v3
         with:
-          root_file: cv.tex
+          root_file: cv/cv.tex
       - name: Copy
         run: |
           mkdir output
@@ -28,10 +30,23 @@ jobs:
         with:
           name: cv
           path: output/cv.pdf
-      - name: Commit
-        uses: stefanzweifel/git-auto-commit-action@v5
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          commit_user_name: Ari Dyckovsky
-          commit_user_email: aridyckovsky@gmail.com
-          commit_author: Ari Dyckovsky <aridyckovsky@gmail.com>
-          commit_message: Automated PDF creation at ${{ github.event.repository.updated_at}}
+          tag_name: updated-${{ github.event.repository.updated_at }}
+          release_name: Automated PDF build updated-${{ github.event.repository.updated_at }}
+          draft: false
+          prerelease: false
+      - name: Upload Release
+        id: upload-release
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_name: cv
+          asset_path: output/cv.pdf
+          asset_content_type: application/pdf

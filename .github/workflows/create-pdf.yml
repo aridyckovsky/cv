@@ -22,18 +22,15 @@ jobs:
         with:
           root_file: cv.tex
           working_directory: cv
-      - name: Copy
-        run: |
-          cp ./cv/cv.pdf ../cv.pdf
       - name: Upload
         uses: actions/upload-artifact@v4
         with:
           name: cv
-          path: cv.pdf
+          path: cv/cv.pdf
       - name: Release
         uses: softprops/action-gh-release@v2
         if: startsWith(github.ref, 'refs/tags/')
         with:
           tag_name: "test"
           files: |
-            cv.pdf
+            cv/cv.pdf

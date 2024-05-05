@@ -30,6 +30,8 @@ jobs:
           compression-level: 0 # don't compress PDF
   deploy:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     needs: build
     if: github.ref == 'refs/heads/main'
     steps:

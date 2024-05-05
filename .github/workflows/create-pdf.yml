@@ -22,7 +22,7 @@ jobs:
         with:
           root_file: cv.tex
           working_directory: cv
-      - name: Upload
+      - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
           name: cv
@@ -35,6 +35,11 @@ jobs:
     needs: build
     if: github.ref == 'refs/heads/main'
     steps:
+      - name: Download Artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: cv
+          path: cv/cv.pdf
       - name: Tag
         id: generate_release_tag
         uses: amitsingh-007/next-release-tag@v5.1.0

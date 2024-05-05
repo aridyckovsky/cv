@@ -44,7 +44,7 @@ jobs:
         with:
           name: cv
           path: artifacts
-      - run: ls -R cv
+      - run: ls -R artifacts
       - name: Tag
         id: generate_release_tag
         uses: amitsingh-007/next-release-tag@v5.1.0

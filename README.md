@@ -13,7 +13,7 @@ TODO.
 
 ### Settings for VS Code
 
-The [.vscode](.vscode/) folder includes the recommended [extensions.json](.vscode/extensions.json) and [settings.json](.vscode/settings.json). Changes made here should be done sparingly, e.g., when required for dependency updates.
+The [`.vscode`](.vscode/) folder includes the recommended [`extensions.json`](.vscode/extensions.json) and [`settings.json`](.vscode/settings.json). Changes made here should be done sparingly, e.g., when required for dependency updates.
 
 ### Using `textindent` with LaTeX Workshop on MacOS
 
@@ -31,11 +31,11 @@ This will require `sudo` access, likely via password. Then, follow the prompts, 
 
 ## Usage
 
-The CV is updated in the [cv](cv/) directory, which includes:
+The CV is updated in the [`cv/`](cv/) directory, which includes:
 
-- [bib](cv/bib), the folder containing `*.bib` files for formal references, like journal articles, conferences, and books
-- [cv.cls](cv/cv.cls), the file defining the CV's style and structure of sections/components
-- [cv.tex](cv/cv.tex), the file defining the CV content, using styles, variables, and environments exposed by `cv.cls`
+- [`bib/`](cv/bib), the folder containing `*.bib` files for formal references, like journal articles, conferences, and books
+- [`cv.cls`](cv/cv.cls), the file defining the CV's style and structure of sections/components
+- [`cv.tex`](cv/cv.tex), the file defining the CV content, using styles, variables, and environments exposed by `cv.cls`
 
 ## Development
 

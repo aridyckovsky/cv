@@ -15,7 +15,9 @@ TODO.
 
 The [`.vscode`](.vscode/) folder includes the recommended [`extensions.json`](.vscode/extensions.json) and [`settings.json`](.vscode/settings.json). Changes made here should be done sparingly, e.g., when required for dependency updates.
 
-### Using `textindent` with LaTeX Workshop on MacOS
+To install all recommended extensions for VS Code, use the `@recommended` filter in the Extensions search bar, which can be accomplished with `Command`+`Shift`+`P` (on MacOS) and search **Show Recommended Extensions**.
+
+#### Using `latexindent.pl` formatter with LaTeX Workshop on MacOS
 
 To enable LaTeX Workshop to correctly handle formatting on save, install the following Perl packages on your local machine via terminal:
 

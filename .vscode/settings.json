@@ -21,6 +21,7 @@
         "editor.autoIndent": "full",
         "editor.useTabStops": true,
         "editor.formatOnSave": true,
+        "editor.formatOnType": false,
         "editor.wordWrap": "wordWrapColumn"
     },
     "[github-actions-workflow]": {
@@ -33,7 +34,7 @@
       "editor.formatOnType": false,
       "editor.formatOnPaste": false,
       "editor.codeActionsOnSave": {
-        "source.fixAll": true
+        "source.fixAll": "explicit"
       }
     },
 
@@ -72,6 +73,14 @@
         "%DOCFILE%"
     ],
     "latex-workshop.linting.chktex.enabled": true,
+    "latex-workshop.linting.chktex.exec.path": "chktex",
+    "latex-workshop.latexindent.path": "latexindent",
+    "latex-workshop.latexindent.args": [
+      "-c",
+      "%WORKSPACE_FOLDER%/cv",
+      "%TMPFILE%",
+      "-y=defaultIndent: '%INDENT%'"
+    ],
 
     //* LaTeX Utilities *//
     "latex-utilities.countWord.format": "${words} Words (${wordsBody} in Body)",

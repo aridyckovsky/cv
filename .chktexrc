@@ -17,3 +17,18 @@ QuoteStyle = Traditional
 #
 
 TabSize = 8
+
+#####################################################################
+#
+# Here, you can put default commandline options; most users would for
+# instance like to put -v2 here.
+#
+#  -n == --nowarn
+#
+
+CmdLine
+{
+  -n 1
+  -n 8
+  -d 4
+}

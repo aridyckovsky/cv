@@ -19,7 +19,7 @@ The [.vscode](.vscode/) folder includes the recommended [extensions.json](.vscod
 
 To enable LaTeX Workshop to correctly handle formatting on save, install the following Perl packages on your local machine via terminal:
 
-```bash
+```sh
 sudo cpan Log::Log4perl
 sudo cpan Log::Dispatch
 sudo cpan YAML::Tiny

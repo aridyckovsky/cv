@@ -15,6 +15,10 @@ TODO.
 
 TODO.
 
+## Development
+
+Changes take place in the `drafting` branch. The `main` branch serves as the latest stable and released version of the CV, including its contents and the methods for generating it. When a CV draft is ready for release, make a pull request to merge the draft into `main`. If all checks pass, complete the merge to build and release a new version of the CV. Versions are formatted with `v{yyyy}.{mm}.{dd}.{i}`, e.g., [v2024.5.4.1](https://github.com/aridyckovsky/cv/releases/tag/v2024.5.4.1). Multiple versions within a day are tracked by an increasing sequence of natural numbers `i`.
+
 ## Acknowledgements
 
 This automation is made possible with the help of great open source contributiosn like:

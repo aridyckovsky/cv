@@ -28,6 +28,22 @@
         "editor.tabSize": 2,
         "editor.autoIndent": "advanced"
     },
+    "[markdown]": {
+      "editor.formatOnSave": true,
+      "editor.formatOnType": false,
+      "editor.formatOnPaste": false,
+      "editor.codeActionsOnSave": {
+        "source.fixAll": true
+      }
+    },
+
+    //* Markdownlint *//
+    "markdownlint.lintWorkspaceGlobs": [
+      // Source: https://github.com/microsoft/vscode/blob/main/extensions/markdown-basics/package.json
+      "**/*.{md,mkd,mdwn,mdown,markdown,markdn,mdtxt,mdtext,workbook}",
+      // Additional exclusions
+      "!**/.git",
+    ],
 
     //* LaTeX Workshop *//
     "latex-workshop.intellisense.package.enabled": true,
@@ -55,6 +71,7 @@
         "--output-directory=%OUTDIR%",
         "%DOCFILE%"
     ],
+    "latex-workshop.linting.chktex.enabled": true,
 
     //* LaTeX Utilities *//
     "latex-utilities.countWord.format": "${words} Words (${wordsBody} in Body)",

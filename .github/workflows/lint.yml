@@ -16,7 +16,7 @@ jobs:
         with:
           sparse-checkout: |
             .chktexrc
-            cv/*.tex
+            cv
       - name: ChkTeX Linter
         uses: j2kun/chktex-action@v1.0.4
         env:

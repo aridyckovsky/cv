@@ -35,11 +35,15 @@ jobs:
     needs: build
     if: github.ref == 'refs/heads/main'
     steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }}
       - name: Download Artifact
         uses: actions/download-artifact@v4
         with:
           name: cv
-          path: cv/cv.pdf
+          path: cv
       - name: Tag
         id: generate_release_tag
         uses: amitsingh-007/next-release-tag@v5.1.0
@@ -51,5 +55,5 @@ jobs:
         uses: ncipollo/release-action@v1
         with:
           tag: ${{ steps.generate_release_tag.outputs.next_release_tag }}
-          artifacts: "cv/cv.pdf"
+          artifacts: "cv"
           generateReleaseNotes: true

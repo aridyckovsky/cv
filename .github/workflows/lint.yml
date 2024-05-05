@@ -14,7 +14,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          ref: ${{ github.head_ref }}
+          sparse-checkout: |
+            .chktexrc
+            cv/*.tex
       - name: ChkTeX Linter
         uses: j2kun/chktex-action@v1.0.4
         env:

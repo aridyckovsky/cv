@@ -21,6 +21,7 @@
         "editor.autoIndent": "full",
         "editor.useTabStops": true,
         "editor.formatOnSave": true,
+        "editor.formatOnType": false,
         "editor.wordWrap": "wordWrapColumn"
     },
     "[github-actions-workflow]": {
@@ -28,6 +29,22 @@
         "editor.tabSize": 2,
         "editor.autoIndent": "advanced"
     },
+    "[markdown]": {
+      "editor.formatOnSave": true,
+      "editor.formatOnType": false,
+      "editor.formatOnPaste": false,
+      "editor.codeActionsOnSave": {
+        "source.fixAll": "explicit"
+      }
+    },
+
+    //* Markdownlint *//
+    "markdownlint.lintWorkspaceGlobs": [
+      // Source: https://github.com/microsoft/vscode/blob/main/extensions/markdown-basics/package.json
+      "**/*.{md,mkd,mdwn,mdown,markdown,markdn,mdtxt,mdtext,workbook}",
+      // Additional exclusions
+      "!**/.git",
+    ],
 
     //* LaTeX Workshop *//
     "latex-workshop.intellisense.package.enabled": true,
@@ -54,6 +71,16 @@
     "latex-workshop.latex.magic.bib.args": [
         "--output-directory=%OUTDIR%",
         "%DOCFILE%"
+    ],
+    "latex-workshop.linting.chktex.enabled": true,
+    "latex-workshop.linting.chktex.exec.path": "chktex",
+    "latex-workshop.formatting.latex": "latexindent",
+    "latex-workshop.formatting.latexindent.path": "latexindent",
+    "latex-workshop.formatting.latexindent.args": [
+      "-c",
+      "%WORKSPACE_FOLDER%/cv",
+      "%TMPFILE%",
+      "-y=defaultIndent: '%INDENT%'"
     ],
 
     //* LaTeX Utilities *//

@@ -1,7 +1,7 @@
  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Ari Dyckovsky's CV Template - CV CLASS FILE
 %
-% This class file defines the structure and design of a hybrid CV/Resume template. 
+% This class file defines the structure and design of a hybrid CV/Resume template.
 %
 % Original header:
 % Copyright (C) 2020 by Ari Dyckovsky
@@ -125,13 +125,13 @@
         \end{center}
         \medskip % must leave line empty below
 
-        \noindent \emailsize \href{mailto:\@myemail}{\nolinkurl{\@myemail}} \hfill 
+        \noindent \emailsize \href{mailto:\@myemail}{\nolinkurl{\@myemail}} \hfill
             \addresssize \@myaddress
         \\
-        \noindent \githubsize \href{\@mywebsite}{\@mywebsite} \hfill 
+        \noindent \githubsize \href{\@mywebsite}{\@mywebsite} \hfill
             \locationsize \@mylocation % must leave line empty below\\
 
-            
+
     \endgroup
 }
 
@@ -178,7 +178,7 @@
   \headline{\textsc{\sectionheadersize \color{myblack} #1}} % Section title
 
   \vspace{1.25em}
-  
+
   %\hrule % Horizontal line
 }{\vspace{1.25em}}
 
@@ -197,9 +197,9 @@
 %	TEACHING EXPERIENCE SUBSECTIONS
 %------------------------------------------------------------------------------
 
-\newenvironment{cvSubsectionTeaching}[5]{
-    \leftrightoptions{{\bf #1} for {#2} (Rating: {#3}/5)}{{#4}}
-    {\textit{#5}}
+\newenvironment{cvSubsectionTeaching}[4]{
+    \leftrightoptions{{\bf #1} for {#2}}{{#3}}
+    {\textit{#4}}
     }{
     %\vspace{0.5em} % Some space after the list of bullet points
 }
@@ -210,7 +210,7 @@
 
 \newenvironment{cvSubsectionWork}[3]{ % 4 input arguments
     \leftrightoptions{{\bf #3}, {#1}}{{#2}} % Bold company name and date on the right
-    
+
     }{
     %\vspace{0.5em} % Some space after the list of bullet points
 }
@@ -247,6 +247,5 @@
 \def\locationskip{\smallskip}
 
 \def\sectionheadersize{\Large}
-\def\sectionlineskip{\medskip} % The space above the horizontal line for each section 
+\def\sectionlineskip{\medskip} % The space above the horizontal line for each section
 \def\sectionskip{\medskip} % The space after the heading section
-

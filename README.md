@@ -31,6 +31,8 @@ sudo cpan Unicode::GCString
 
 This will require `sudo` access, likely via password. Then, follow the prompts, choosing the defaults as you go.
 
+Running `brew install latexindent` may help resolve issues as well. If issues persist with compilation, re-install Perl packages above.
+
 ## Usage
 
 The CV is updated in the [`cv/`](cv/) directory, which includes:

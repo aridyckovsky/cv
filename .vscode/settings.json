@@ -74,8 +74,9 @@
     ],
     "latex-workshop.linting.chktex.enabled": true,
     "latex-workshop.linting.chktex.exec.path": "chktex",
-    "latex-workshop.latexindent.path": "latexindent",
-    "latex-workshop.latexindent.args": [
+    "latex-workshop.formatting.latex": "latexindent",
+    "latex-workshop.formatting.latexindent.path": "latexindent",
+    "latex-workshop.formatting.latexindent.args": [
       "-c",
       "%WORKSPACE_FOLDER%/cv",
       "%TMPFILE%",
